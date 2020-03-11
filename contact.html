@@ -94,17 +94,13 @@
                     <div id="map" style="height: 480px; position: relative; overflow: hidden;"></div>
                     <script>
                         function initMap() {
-                            var uluru = {
-                                lat: -25.363,
-                                lng: 131.044
-                            };
                             var grayStyles = [{
                                     featureType: "all",
                                     stylers: [{
-                                            saturation: -90
+                                            saturation: 0
                                         },
                                         {
-                                            lightness: 50
+                                            lightness: 0
                                         }
                                     ]
                                 },
@@ -117,10 +113,10 @@
                             ];
                             var map = new google.maps.Map(document.getElementById('map'), {
                                 center: {
-                                    lat: -31.197,
-                                    lng: 150.744
+                                    lat: 49.564872,
+                                    lng: 17.801333
                                 },
-                                zoom: 9,
+                                zoom: 13,
                                 styles: grayStyles,
                                 scrollwheel: false
                             });
@@ -128,9 +124,7 @@
                     </script>
                     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBo0kJAp1GsHWw5aVYaNokup13ZK-4To9Q&amp;callback=initMap">
                     </script>
-    
                 </div>
-    
     
                 <div class="row">
                     <div class="col-12">
