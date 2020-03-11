@@ -94,7 +94,8 @@
                     <div id="map" style="height: 480px; position: relative; overflow: hidden;"></div>
                     <script>
                         function initMap() {
-                            var grayStyles = [{
+                            let latLng = {lat: 49.564872, lng: 17.801333};
+                            let grayStyles = [{
                                     featureType: "all",
                                     stylers: [{
                                             saturation: 0
@@ -118,8 +119,14 @@
                                 },
                                 zoom: 13,
                                 styles: grayStyles,
-                                scrollwheel: false
+                                scrollwheel: true
                             });
+                            let marker = new google.maps.Marker({
+                                position: latLng,
+                                title: 'Hello, world!',
+                                animation:google.maps.Animation.DROP
+                            });
+                            marker.setMap(map);
                         }
                     </script>
                     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBo0kJAp1GsHWw5aVYaNokup13ZK-4To9Q&amp;callback=initMap">
